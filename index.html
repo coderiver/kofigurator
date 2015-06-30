@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" media="all" href="css/screen.css">
+	<link rel="stylesheet" media="all" href="css/colpick.css">
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css">
+</head>
+<body>
+<!-- config -->
+<div class="config js-config">
+	<div class="config__aside">
+		<div class="config__title">Виберіть колір</div>
+		<div class="config__accord">
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Дах</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__colpick js-colpick" data-config="js-config-roof"></div>
+				</div>
+			</div>
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Фасад</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__colpick js-colpick" data-config="js-config-facade"></div>
+				</div>
+			</div>
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Вікна</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__colpick js-colpick" data-config="js-config-window"></div>
+				</div>
+			</div>
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Ролети</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Направляючі</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Рейки</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Ролети - Монтаж</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Верх ролета</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-rollet"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Направляючі</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Рейки</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="config__accord-item">
+				<div class="config__accord-title js-config-accord-title">Ворота</div>
+				<div class="config__accord-body js-config-accord-body">
+					<div class="config__colpick js-colpick" data-config="js-config-gate"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="config__section">
+		<div class="config__wrapper">
+			<!-- 0 -->
+			<div class="config__bg">
+				<img src="img/house1/p0.png" alt="">
+			</div>
+			<!-- 1 -->
+			<svg class="config__l config__l_1" version="1.2">
+				<defs>
+					<mask id="l1">
+						<image width="100%" height="100%" xlink:href="img/house1/p1.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-window" mask="url(#l1)" width="100%" height="100%" style="fill: red;"/>
+			</svg>
+			<!-- 2 -->
+			<svg class="config__l config__l_2" version="1.2">
+				<defs>
+					<mask id="l2">
+						<image width="100%" height="100%" xlink:href="img/house1/p2.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-facade" mask="url(#l2)" width="100%" height="100%" style="fill: green;"/>
+			</svg>
+			<!-- 3 -->
+			<svg class="config__l config__l_3" version="1.2">
+				<defs>
+					<mask id="l3">
+						<image width="100%" height="100%" xlink:href="img/house1/p3.png"/>
+					</mask>
+				</defs>
+				<rect  class="js-config-roof" mask="url(#l3)" width="100%" height="100%" style="fill: blue;"/>
+			</svg>
+			<!-- 4 -->
+			<div class="config__l config__l_4">
+				<img src="img/house1/p4.png" alt="">
+			</div>
+			<!-- 5 -->
+			<div class="config__l config__l_5">
+				<img src="img/house1/p5.png" alt="">
+			</div>
+			<!-- 6 -->
+			<svg class="config__l config__l_6" version="1.2">
+				<defs>
+					<mask id="l6">
+						<image width="100%" height="100%" xlink:href="img/house1/p6.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-rails" mask="url(#l6)" width="100%" height="100%" style="fill: violet;"/>
+			</svg>
+			<!-- 7 -->
+			<svg class="config__l config__l_7" version="1.2">
+				<defs>
+					<mask id="l7">
+						<image width="100%" height="100%" xlink:href="img/house1/p7.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-guiding" mask="url(#l7)" width="100%" height="100%" style="fill: yellow;"/>
+			</svg>
+			<!-- 8 -->
+			<div class="config__l config__l_8">
+				<img src="img/house1/p8.png" alt="">
+			</div>
+			<!-- 9 -->
+			<div class="config__l config__l_9">
+				<img src="img/house1/p9.png" alt="">
+			</div>
+			<!-- 10 -->
+			<svg class="config__l config__l_10" version="1.2">
+				<defs>
+					<mask id="l10">
+						<image width="100%" height="100%" xlink:href="img/house1/p10.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-rollet" mask="url(#l10)" width="100%" height="100%" style="fill: red;"/>
+			</svg>
+			<!-- 11 -->
+			<div class="config__l config__l_11">
+				<img src="img/house1/p11.png" alt="">
+			</div>
+			<!-- 12 -->
+			<svg class="config__l config__l_12" version="1.2">
+				<defs>
+					<mask id="l12">
+						<image width="100%" height="100%" xlink:href="img/house1/p12.png"/>
+					</mask>
+				</defs>
+				<rect class="js-config-gate" mask="url(#l12)" width="100%" height="100%" style="fill: yellow;"/>
+			</svg>
+			<!-- 13 -->
+			<div class="config__l config__l_13">
+				<img src="img/house1/p13.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

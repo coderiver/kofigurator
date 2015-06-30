@@ -1,0 +1,59 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
+
+input[type="submit"], button { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555555; }
+
+.config { max-width: 960px; margin: 0 auto; padding: 0 20px; *zoom: 1; }
+.config:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 767px) { .config { padding: 0 10px; } }
+.config img { display: block; max-width: 100%; }
+.config .config__section { overflow: hidden; }
+.config .config__aside { float: right; width: 200px; margin-left: 25px; }
+@media only screen and (max-width: 767px) { .config .config__aside { float: none; width: 100%; margin: 0 0 15px; } }
+.config .config__wrapper { position: relative; font-size: 0; }
+.config .config__l { position: absolute; }
+.config .config__l_1 { top: 24.5%; left: 10%; width: 68.3%; height: 45.358%; }
+.config .config__l_2 { top: 17.4%; left: 9%; width: 83.81%; height: 55%; }
+.config .config__l_3 { top: 15%; left: 37%; width: 48.572%; height: 11.608%; }
+.config .config__l_4 { top: 15%; left: 9.06%; width: 83.82%; opacity: 0.5; }
+.config .config__l_5 { top: 15%; left: 9%; width: 83.81%; opacity: 0.1; }
+.config .config__l_6 { top: 50.4%; left: 9.8%; width: 66.803%; height: 18.93%; }
+.config .config__l_7 { top: 50.4%; left: 9.9%; width: 66.803%; height: 18.93%; }
+.config .config__l_8 { top: 50%; left: 9.3%; width: 67.62%; }
+.config .config__l_9 { top: 50%; left: 9.53%; width: 67.22%; }
+.config .config__l_10 { top: 50%; left: 9.4%; width: 67.483%; height: 2.858%; }
+.config .config__l_11 { top: 50%; left: 9.6%; width: 26.123%; opacity: 0.4; }
+.config .config__l_12 { top: 52.3%; left: 80.4%; width: 6.667%; height: 14.109%; }
+.config .config__l_13 { top: 52.3%; left: 80.3%; width: 6.667%; }
+.config .config__title { margin-bottom: 10px; font-size: 16px; }
+.config .config__accord-item { border-top: 1px solid #dddddd; }
+.config .config__accord-title { position: relative; padding: 10px 15px 10px 0; font-size: 14px; color: #eb4200; cursor: pointer; }
+.config .config__accord-title.is-active:after { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.config .config__accord-title:after { content: "\f107"; position: absolute; right: 0; top: 50%; margin-top: -9px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 18px; -webkit-transition: -webkit-transform 0.2s; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; transition: transform 0.2s; }
+.config .config__accord-body { display: none; }
+.config .config__accord-body .config__accord-title { padding-left: 20px; }
+.config .config__accord-body .config__accord-title:before { content: ""; position: absolute; top: 50%; left: 0; width: 6px; height: 6px; margin-top: -3px; background: #dddddd; border-radius: 50%; }
+.config .config__colpick .colpick { width: 200px; height: 160px; padding-bottom: 10px; background: none; border: none; border-radius: 0; }
+.config .config__colpick .colpick_color { top: 0; left: 0; outline: none; }
+.config .config__colpick .colpick_color, .config .config__colpick .colpick_color_overlay1, .config .config__colpick .colpick_color_overlay2 { width: 160px; height: 160px; }
+.config .config__colpick .colpick_new_color, .config .config__colpick .colpick_current_color, .config .config__colpick .colpick_hex_field { display: none; }
+.config .config__colpick .colpick_hue { top: 0; left: 173px; height: 160px; border: none; }

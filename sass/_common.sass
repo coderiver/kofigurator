@@ -1,0 +1,324 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+=fa
+	font-family: FontAwesome
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	transform: translate(0, 0)
+	
+$orange: #eb4200
+
+body
+	font-family: Tahoma, Arial, sans-serif
+	font-size: 13px
+	line-height: 1.4
+	min-width: 320px
+	color: #555
+
+
+// common blocks
+.config
+	max-width: 960px
+	margin: 0 auto
+	padding: 0 20px
+	+clr
+	+r(767)
+		padding: 0 10px
+	img
+		display: block
+		max-width: 100%
+	.config__section
+		overflow: hidden
+	.config__aside
+		float: right
+		width: 200px 
+		margin-left: 25px
+		+r(767)
+			float: none
+			width: 100%
+			margin: 0 0 15px
+	.config__wrapper
+		position: relative
+		font-size: 0
+	.config__l
+		position: absolute
+	.config__l_1
+		top: 24.5%
+		left: 10%
+		width: 68.3%
+		height: 45.358%
+	.config__l_2
+		top: 17.4%
+		left: 9%
+		width: 83.81%
+		height: 55%
+	.config__l_3
+		top: 15%
+		left: 37%
+		width: 48.572%
+		height: 11.608%
+	.config__l_4
+		top: 15%
+		left: 9.06%
+		width: 83.82%
+		opacity: .5 
+	.config__l_5
+		top: 15%
+		left: 9%
+		width: 83.81%
+		opacity: .1
+	.config__l_6
+		top: 50.4%
+		left: 9.8%
+		width: 66.803%
+		height: 18.93%
+	.config__l_7
+		top: 50.4%
+		left: 9.9%
+		width: 66.803%
+		height: 18.93%
+	.config__l_8
+		top: 50%
+		left: 9.3%
+		width: 67.62%
+	.config__l_9
+		top: 50%
+		left: 9.53%
+		width: 67.22%
+	.config__l_10
+		top: 50%
+		left: 9.4%
+		width: 67.483%
+		height: 2.858%
+	.config__l_11
+		top: 50%
+		left: 9.6%
+		width: 26.123%
+		opacity: .4
+	.config__l_12
+		top: 52.3%
+		left: 80.4%
+		width: 6.667%
+		height: 14.109%
+	.config__l_13
+		top: 52.3%
+		left: 80.3%
+		width: 6.667%
+	.config__title
+		margin-bottom: 10px
+		font-size: 16px
+	.config__accord-item
+		border-top: 1px solid #ddd 
+	.config__accord-title
+		position: relative
+		padding: 10px 15px 10px 0
+		font-size: 14px
+		color: $orange
+		cursor: pointer
+		&.is-active
+			&:after
+				+rotate(180)
+		&:after
+			content: "\f107"
+			position: absolute
+			right: 0
+			top: 50%
+			margin-top: -9px
+			+fa 
+			font-size: 18px
+			+tr(transform .2s)
+	.config__accord-body
+		display: none
+		.config__accord-title
+			padding-left: 20px
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				width: 6px
+				height: 6px
+				margin-top: -3px
+				background: #ddd
+				border-radius: 50% 
+	.config__colpick
+		.colpick
+			width: 200px
+			height: 160px
+			padding-bottom: 10px
+			background: none
+			border: none
+			border-radius: 0
+		.colpick_color
+			top: 0
+			left: 0
+			outline: none
+		.colpick_color,
+		.colpick_color_overlay1,
+		.colpick_color_overlay2
+			width: 160px
+			height: 160px
+		.colpick_new_color,
+		.colpick_current_color,
+		.colpick_hex_field
+			display: none
+		.colpick_hue
+			top: 0
+			left: 173px
+			height: 160px
+			border: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
