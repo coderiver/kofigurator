@@ -11,167 +11,526 @@
 <body>
 <!-- config -->
 <div class="config js-config">
-	<div class="config__aside">
-		<div class="config__title">Виберіть колір</div>
-		<div class="config__accord">
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Дах</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__colpick js-colpick" data-config="js-config-roof"></div>
+	<!-- intro -->
+	<div class="config__intro js-config-intro">
+		<div class="config__intro-title">Vyberte si typ domu</div>
+		<div class="config__intro-list">
+			<div class="config__intro-item js-config-link" data-house="js-config-house-1">
+				<div class="config__intro-pic">
+					<div class="config__intro-number">1</div>
+					<img src="img/house01.png" alt="">
 				</div>
+				<div class="config__intro-type"><span>Moderní</span>rodinný dům<br>s garáží</div>
 			</div>
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Фасад</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__colpick js-colpick" data-config="js-config-facade"></div>
+			<div class="config__intro-item js-config-link" data-house="js-config-house-2">
+				<div class="config__intro-pic">
+					<div class="config__intro-number">2</div>
+					<img src="img/house02.png" alt="">
 				</div>
+				<div class="config__intro-type"><span>Klasický</span>rodinný dům<br>s garáží</div>
 			</div>
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Вікна</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__colpick js-colpick" data-config="js-config-window"></div>
+			<div class="config__intro-item js-config-link" data-house="js-config-house-3">
+				<div class="config__intro-pic">
+					<div class="config__intro-number">3</div>
+					<img src="img/house03.png" alt="">
 				</div>
-			</div>
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Ролети</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__accord-item">
-						<div class="config__accord-title js-config-accord-title">Направляючі</div>
-						<div class="config__accord-body js-config-accord-body">
-							<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
-						</div>
-					</div>
-					<div class="config__accord-item">
-						<div class="config__accord-title js-config-accord-title">Рейки</div>
-						<div class="config__accord-body js-config-accord-body">
-							<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Ролети - Монтаж</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__accord-item">
-						<div class="config__accord-title js-config-accord-title">Верх ролета</div>
-						<div class="config__accord-body js-config-accord-body">
-							<div class="config__colpick js-colpick" data-config="js-config-rollet"></div>
-						</div>
-					</div>
-					<div class="config__accord-item">
-						<div class="config__accord-title js-config-accord-title">Направляючі</div>
-						<div class="config__accord-body js-config-accord-body">
-							<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
-						</div>
-					</div>
-					<div class="config__accord-item">
-						<div class="config__accord-title js-config-accord-title">Рейки</div>
-						<div class="config__accord-body js-config-accord-body">
-							<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="config__accord-item">
-				<div class="config__accord-title js-config-accord-title">Ворота</div>
-				<div class="config__accord-body js-config-accord-body">
-					<div class="config__colpick js-colpick" data-config="js-config-gate"></div>
-				</div>
+				<div class="config__intro-type"><span>Řadový</span>rodinný dům<br>s garáží</div>
 			</div>
 		</div>
 	</div>
-	<div class="config__section">
-		<div class="config__wrapper">
-			<!-- 0 -->
-			<div class="config__bg">
-				<img src="img/house1/p0.png" alt="">
+	<!-- houses -->
+	<div class="config__in">
+		<!-- config house 1 -->
+		<div class="config__house config__house_1 js-config-house-1">
+			<div class="config__aside">
+				<div class="config__title">Vyberte si vlastní barvu</div>
+				<div class="config__accord">
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Střecha</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-roof"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Fasáda</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-facade"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Okna</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-window"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - novostavba</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - dodatečná montaž</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Schránka</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rollet"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Vrata</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-gate"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- 1 -->
-			<svg class="config__l config__l_1" version="1.2">
-				<defs>
-					<mask id="l1">
-						<image width="100%" height="100%" xlink:href="img/house1/p1.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-window" mask="url(#l1)" width="100%" height="100%" style="fill: red;"/>
-			</svg>
-			<!-- 2 -->
-			<svg class="config__l config__l_2" version="1.2">
-				<defs>
-					<mask id="l2">
-						<image width="100%" height="100%" xlink:href="img/house1/p2.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-facade" mask="url(#l2)" width="100%" height="100%" style="fill: green;"/>
-			</svg>
-			<!-- 3 -->
-			<svg class="config__l config__l_3" version="1.2">
-				<defs>
-					<mask id="l3">
-						<image width="100%" height="100%" xlink:href="img/house1/p3.png"/>
-					</mask>
-				</defs>
-				<rect  class="js-config-roof" mask="url(#l3)" width="100%" height="100%" style="fill: blue;"/>
-			</svg>
-			<!-- 4 -->
-			<div class="config__l config__l_4">
-				<img src="img/house1/p4.png" alt="">
+			<div class="config__section">
+				<div class="config__wrapper">
+					<!-- 0 -->
+					<div class="config__bg">
+						<img src="img/house1/p0.png" alt="">
+					</div>
+					<!-- 1 -->
+					<svg class="config__l config__l_1" version="1.2">
+						<defs>
+							<mask id="house1-l1">
+								<image width="100%" height="100%" xlink:href="img/house1/p1.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-window" mask="url(#house1-l1)" width="100%" height="100%" style="fill: red;"/>
+					</svg>
+					<!-- 2 -->
+					<svg class="config__l config__l_2" version="1.2">
+						<defs>
+							<mask id="house1-l2">
+								<image width="100%" height="100%" xlink:href="img/house1/p2.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-facade" mask="url(#house1-l2)" width="100%" height="100%" style="fill: green;"/>
+					</svg>
+					<!-- 3 -->
+					<svg class="config__l config__l_3" version="1.2">
+						<defs>
+							<mask id="house1-l3">
+								<image width="100%" height="100%" xlink:href="img/house1/p3.png"/>
+							</mask>
+						</defs>
+						<rect  class="js-config-roof" mask="url(#house1-l3)" width="100%" height="100%" style="fill: blue;"/>
+					</svg>
+					<!-- 4 -->
+					<div class="config__l config__l_4">
+						<img src="img/house1/p4.png" alt="">
+					</div>
+					<!-- 5 -->
+					<div class="config__l config__l_5">
+						<img src="img/house1/p5.png" alt="">
+					</div>
+					<!-- 6 -->
+					<svg class="config__l config__l_6" version="1.2">
+						<defs>
+							<mask id="house1-l6">
+								<image width="100%" height="100%" xlink:href="img/house1/p6.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rails" mask="url(#house1-l6)" width="100%" height="100%" style="fill: violet;"/>
+					</svg>
+					<!-- 7 -->
+					<svg class="config__l config__l_7" version="1.2">
+						<defs>
+							<mask id="house1-l7">
+								<image width="100%" height="100%" xlink:href="img/house1/p7.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-guiding" mask="url(#house1-l7)" width="100%" height="100%" style="fill: yellow;"/>
+					</svg>
+					<!-- 8 -->
+					<div class="config__l config__l_8">
+						<img src="img/house1/p8.png" alt="">
+					</div>
+					<!-- 9 -->
+					<div class="config__l config__l_9">
+						<img src="img/house1/p9.png" alt="">
+					</div>
+					<!-- 10 -->
+					<svg class="config__l config__l_10" version="1.2">
+						<defs>
+							<mask id="house1-l10">
+								<image width="100%" height="100%" xlink:href="img/house1/p10.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rollet" mask="url(#house1-l10)" width="100%" height="100%" style="fill: red;"/>
+					</svg>
+					<!-- 11 -->
+					<div class="config__l config__l_11">
+						<img src="img/house1/p11.png" alt="">
+					</div>
+					<!-- 12 -->
+					<svg class="config__l config__l_12" version="1.2">
+						<defs>
+							<mask id="house1-l12">
+								<image width="100%" height="100%" xlink:href="img/house1/p12.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-gate" mask="url(#house1-l12)" width="100%" height="100%" style="fill: yellow;"/>
+					</svg>
+					<!-- 13 -->
+					<div class="config__l config__l_13">
+						<img src="img/house1/p13.png" alt="">
+					</div>
+				</div>
 			</div>
-			<!-- 5 -->
-			<div class="config__l config__l_5">
-				<img src="img/house1/p5.png" alt="">
+		</div>
+		<!-- config house 2 -->
+		<div class="config__house config__house_2 js-config-house-2">
+			<div class="config__aside">
+				<div class="config__title">Vyberte si vlastní barvu</div>
+				<div class="config__accord">
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Střecha</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-roof"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Fasáda</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-facade"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Okna</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-window"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - novostavba</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - dodatečná montaž</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Schránka</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rollet"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Vrata</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-gate"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- 6 -->
-			<svg class="config__l config__l_6" version="1.2">
-				<defs>
-					<mask id="l6">
-						<image width="100%" height="100%" xlink:href="img/house1/p6.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-rails" mask="url(#l6)" width="100%" height="100%" style="fill: violet;"/>
-			</svg>
-			<!-- 7 -->
-			<svg class="config__l config__l_7" version="1.2">
-				<defs>
-					<mask id="l7">
-						<image width="100%" height="100%" xlink:href="img/house1/p7.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-guiding" mask="url(#l7)" width="100%" height="100%" style="fill: yellow;"/>
-			</svg>
-			<!-- 8 -->
-			<div class="config__l config__l_8">
-				<img src="img/house1/p8.png" alt="">
+			<div class="config__section">
+				<div class="config__wrapper">
+					<!-- 0 -->
+					<div class="config__bg">
+						<img src="img/house2/p0.png" alt="">
+					</div>
+					<!-- 1 -->
+					<svg class="config__l config__l_1" version="1.2">
+						<defs>
+							<mask id="house2-l1">
+								<image width="100%" height="100%" xlink:href="img/house2/p1.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-window" mask="url(#house2-l1)" width="100%" height="100%" style="fill: red;"/>
+					</svg>
+					<!-- 2 -->
+					<svg class="config__l config__l_2" version="1.2">
+						<defs>
+							<mask id="house2-l2">
+								<image width="100%" height="100%" xlink:href="img/house2/p2.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-facade" mask="url(#house2-l2)" width="100%" height="100%" style="fill: green;"/>
+					</svg>
+					<!-- 3 -->
+					<svg class="config__l config__l_3" version="1.2">
+						<defs>
+							<mask id="house2-l3">
+								<image width="100%" height="100%" xlink:href="img/house2/p3.png"/>
+							</mask>
+						</defs>
+						<rect  class="js-config-roof" mask="url(#house2-l3)" width="100%" height="100%" style="fill: blue;"/>
+					</svg>
+					<!-- 4 -->
+					<div class="config__l config__l_4">
+						<img src="img/house2/p4.png" alt="">
+					</div>
+					<!-- 5 -->
+					<div class="config__l config__l_5">
+						<img src="img/house2/p5.png" alt="">
+					</div>
+					<!-- 6 -->
+					<svg class="config__l config__l_6" version="1.2">
+						<defs>
+							<mask id="house2-l6">
+								<image width="100%" height="100%" xlink:href="img/house2/p6.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-gate" mask="url(#house2-l6)" width="100%" height="100%" style="fill: violet;"/>
+					</svg>
+					<!-- 7 -->
+					<div class="config__l config__l_7">
+						<img src="img/house2/p7.png" alt="">
+					</div>
+					<!-- 8 -->
+					<svg class="config__l config__l_8" version="1.2">
+						<defs>
+							<mask id="house2-l8">
+								<image width="100%" height="100%" xlink:href="img/house2/p8.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rails" mask="url(#house2-l8)" width="100%" height="100%" style="fill: gray;"/>
+					</svg>
+					<!-- 9 -->
+					<svg class="config__l config__l_9" version="1.2">
+						<defs>
+							<mask id="house2-l9">
+								<image width="100%" height="100%" xlink:href="img/house2/p9.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-guiding" mask="url(#house2-l9)" width="100%" height="100%" style="fill: orange;"/>
+					</svg>
+					<!-- 10 -->
+					<div class="config__l config__l_10">
+						<img src="img/house2/p10.png" alt="">
+					</div>
+					<!-- 11 -->
+					<div class="config__l config__l_11">
+						<img src="img/house2/p11.png" alt="">
+					</div>
+					<!-- 12 -->
+					<svg class="config__l config__l_12" version="1.2">
+						<defs>
+							<mask id="house2-l12">
+								<image width="100%" height="100%" xlink:href="img/house2/p12.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rollet" mask="url(#house2-l12)" width="100%" height="100%" style="fill: yellow;"/>
+					</svg>
+				</div>
 			</div>
-			<!-- 9 -->
-			<div class="config__l config__l_9">
-				<img src="img/house1/p9.png" alt="">
+		</div>
+		<!-- config house 3 -->
+		<div class="config__house config__house_3 js-config-house-3">
+			<div class="config__aside">
+				<div class="config__title">Vyberte si vlastní barvu</div>
+				<div class="config__accord">
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Střecha</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-roof"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Fasáda</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-facade"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Okna</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-window"></div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - novostavba</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Rolety - dodatečná montaž</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Schránka</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rollet"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Vodicí lišta</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-guiding"></div>
+								</div>
+							</div>
+							<div class="config__accord-item">
+								<div class="config__accord-title js-config-accord-title">Lamely</div>
+								<div class="config__accord-body js-config-accord-body">
+									<div class="config__colpick js-colpick" data-config="js-config-rails"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="config__accord-item">
+						<div class="config__accord-title js-config-accord-title">Vrata</div>
+						<div class="config__accord-body js-config-accord-body">
+							<div class="config__colpick js-colpick" data-config="js-config-gate"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- 10 -->
-			<svg class="config__l config__l_10" version="1.2">
-				<defs>
-					<mask id="l10">
-						<image width="100%" height="100%" xlink:href="img/house1/p10.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-rollet" mask="url(#l10)" width="100%" height="100%" style="fill: red;"/>
-			</svg>
-			<!-- 11 -->
-			<div class="config__l config__l_11">
-				<img src="img/house1/p11.png" alt="">
-			</div>
-			<!-- 12 -->
-			<svg class="config__l config__l_12" version="1.2">
-				<defs>
-					<mask id="l12">
-						<image width="100%" height="100%" xlink:href="img/house1/p12.png"/>
-					</mask>
-				</defs>
-				<rect class="js-config-gate" mask="url(#l12)" width="100%" height="100%" style="fill: yellow;"/>
-			</svg>
-			<!-- 13 -->
-			<div class="config__l config__l_13">
-				<img src="img/house1/p13.png" alt="">
+			<div class="config__section">
+				<div class="config__wrapper">
+					<!-- 0 -->
+					<div class="config__bg">
+						<img src="img/house3/p0.png" alt="">
+					</div>
+					<!-- 1 -->
+					<svg class="config__l config__l_1" version="1.2">
+						<defs>
+							<mask id="house3-l1">
+								<image width="100%" height="100%" xlink:href="img/house3/p1.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-facade" mask="url(#house3-l1)" width="100%" height="100%" style="fill: red;"/>
+					</svg>
+					<!-- 2 -->
+					<svg class="config__l config__l_2" version="1.2">
+						<defs>
+							<mask id="house3-l2">
+								<image width="100%" height="100%" xlink:href="img/house3/p2.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-window" mask="url(#house3-l2)" width="100%" height="100%" style="fill: green;"/>
+					</svg>
+					<!-- 3 -->
+					<svg class="config__l config__l_3" version="1.2">
+						<defs>
+							<mask id="house3-l3">
+								<image width="100%" height="100%" xlink:href="img/house3/p3.png"/>
+							</mask>
+						</defs>
+						<rect  class="js-config-roof" mask="url(#house3-l3)" width="100%" height="100%" style="fill: blue;"/>
+					</svg>
+					<!-- 4 -->
+					<div class="config__l config__l_4">
+						<img src="img/house3/p4.png" alt="">
+					</div>
+					<!-- 5 -->
+					<div class="config__l config__l_5">
+						<img src="img/house3/p5.png" alt="">
+					</div>
+					<!-- 6 -->
+					<svg class="config__l config__l_6" version="1.2">
+						<defs>
+							<mask id="house3-l6">
+								<image width="100%" height="100%" xlink:href="img/house3/p6.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rails" mask="url(#house3-l6)" width="100%" height="100%" style="fill: violet;"/>
+					</svg>
+					<!-- 7 -->
+					<svg class="config__l config__l_7" version="1.2">
+						<defs>
+							<mask id="house3-l7">
+								<image width="100%" height="100%" xlink:href="img/house3/p7.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-guiding" mask="url(#house3-l7)" width="100%" height="100%" style="fill: red;"/>
+					</svg>
+					<!-- 8 -->
+					<div class="config__l config__l_8">
+						<img src="img/house3/p8.png" alt="">
+					</div>
+					<!-- 9 -->
+					<svg class="config__l config__l_9" version="1.2">
+						<defs>
+							<mask id="house3-l9">
+								<image width="100%" height="100%" xlink:href="img/house3/p9.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-gate" mask="url(#house3-l9)" width="100%" height="100%" style="fill: orange;"/>
+					</svg>
+					<!-- 10 -->
+					<div class="config__l config__l_10">
+						<img src="img/house3/p10.png" alt="">
+					</div>
+					<!-- 11 -->
+					<div class="config__l config__l_11">
+						<img src="img/house3/p11.png" alt="">
+					</div>
+					<!-- 12 -->
+					<svg class="config__l config__l_12" version="1.2">
+						<defs>
+							<mask id="house3-l12">
+								<image width="100%" height="100%" xlink:href="img/house3/p12.png"/>
+							</mask>
+						</defs>
+						<rect class="js-config-rollet" mask="url(#house3-l12)" width="100%" height="100%" style="fill: yellow;"/>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</div>

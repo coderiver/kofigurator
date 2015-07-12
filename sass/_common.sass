@@ -69,12 +69,51 @@ body
 	max-width: 960px
 	margin: 0 auto
 	padding: 0 20px
-	+clr
+	+nosel
 	+r(767)
 		padding: 0 10px
 	img
 		display: block
 		max-width: 100%
+	.config__intro
+		min-height: 560px
+		text-align: center
+	.config__intro-title
+		margin-bottom: 50px
+		font-size: 20px
+	.config__intro-list
+		+clr
+	.config__intro-item
+		float: left
+		margin-left: 50px
+		cursor: pointer
+		&:first-child
+			margin: 0
+	.config__intro-pic
+		position: relative
+		margin-bottom: 20px
+		font-size: 0
+		img
+			max-width: 100%
+			height: auto
+	.config__intro-number
+		position: absolute
+		top: -5px
+		left: 15px
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		background: $orange 
+		font-size: 24px 
+		color: #FFF 
+		line-height: 60px 
+	.config__intro-type
+		color: $orange
+		font-size: 20px
+		line-height: 1.2
+		span
+			display: block
+			font-weight: 700 
 	.config__section
 		overflow: hidden
 	.config__aside
@@ -90,68 +129,6 @@ body
 		font-size: 0
 	.config__l
 		position: absolute
-	.config__l_1
-		top: 24.5%
-		left: 10%
-		width: 68.3%
-		height: 45.358%
-	.config__l_2
-		top: 17.4%
-		left: 9%
-		width: 83.81%
-		height: 55%
-	.config__l_3
-		top: 15%
-		left: 37%
-		width: 48.572%
-		height: 11.608%
-	.config__l_4
-		top: 15%
-		left: 9.06%
-		width: 83.82%
-		opacity: .5 
-	.config__l_5
-		top: 15%
-		left: 9%
-		width: 83.81%
-		opacity: .1
-	.config__l_6
-		top: 50.4%
-		left: 9.8%
-		width: 66.803%
-		height: 18.93%
-	.config__l_7
-		top: 50.4%
-		left: 9.9%
-		width: 66.803%
-		height: 18.93%
-	.config__l_8
-		top: 50%
-		left: 9.3%
-		width: 67.62%
-	.config__l_9
-		top: 50%
-		left: 9.53%
-		width: 67.22%
-	.config__l_10
-		top: 50%
-		left: 9.4%
-		width: 67.483%
-		height: 2.858%
-	.config__l_11
-		top: 50%
-		left: 9.6%
-		width: 26.123%
-		opacity: .4
-	.config__l_12
-		top: 52.3%
-		left: 80.4%
-		width: 6.667%
-		height: 14.109%
-	.config__l_13
-		top: 52.3%
-		left: 80.3%
-		width: 6.667%
 	.config__title
 		margin-bottom: 10px
 		font-size: 16px
@@ -214,10 +191,188 @@ body
 			top: 0
 			left: 173px
 			height: 160px
-			border: none
-
-
-
+			border: none 
+	.config__house
+		+clr
+	.config__house_1
+		.config__l_1
+			top: 24.5%
+			left: 10%
+			width: 68.3%
+			height: 45.358%
+		.config__l_2
+			top: 17.4%
+			left: 9%
+			width: 83.81%
+			height: 55%
+		.config__l_3
+			top: 15%
+			left: 37%
+			width: 48.572%
+			height: 11.608%
+		.config__l_4
+			top: 15%
+			left: 9.06%
+			width: 83.82%
+			opacity: .5 
+		.config__l_5
+			top: 15%
+			left: 9%
+			width: 83.81%
+			opacity: .1
+		.config__l_6
+			top: 50.4%
+			left: 9.8%
+			width: 66.803%
+			height: 18.93%
+		.config__l_7
+			top: 50.4%
+			left: 9.9%
+			width: 66.803%
+			height: 18.93%
+		.config__l_8
+			top: 50%
+			left: 9.3%
+			width: 67.62%
+		.config__l_9
+			top: 50%
+			left: 9.53%
+			width: 67.22%
+		.config__l_10
+			top: 50%
+			left: 9.4%
+			width: 67.483%
+			height: 2.858%
+		.config__l_11
+			top: 50%
+			left: 9.6%
+			width: 26.123%
+			opacity: .4
+		.config__l_12
+			top: 52.3%
+			left: 80.4%
+			width: 6.667%
+			height: 14.109%
+		.config__l_13
+			top: 52.3%
+			left: 80.3%
+			width: 6.667%
+	.config__house_2
+		.config__l_1
+			top: 31.6%
+			left: 21.1%
+			width: 63.266%
+			height: 43.572%
+		.config__l_2
+			top: 17.4%
+			left: 12%
+			width: 75.648%
+			height: 59.823%
+		.config__l_3
+			top: 12.6%
+			left: 8.6%
+			width: 84.9%
+			height: 34.644%
+		.config__l_4
+			top: 12.6%
+			left: 8.3%
+			width: 85.444%
+			opacity: .5 
+		.config__l_5
+			top: 12.6%
+			left: 8.6%
+			width: 84.9%
+			opacity: .5
+		.config__l_6
+			top: 58.3%
+			left: 65.7%
+			width: 18.777%
+			height: 14.288%
+		.config__l_7
+			top: 58.3%
+			left: 65.7%
+			width: 18.777%
+		.config__l_8
+			top: 31.6%
+			left: 20.8%
+			width: 32.382%
+			height: 43.74%
+		.config__l_9
+			top: 31.6%
+			left: 20.8%
+			width: 32.382%
+			height: 43.74%
+		.config__l_10
+			top: 31.6%
+			left: 21%
+			width: 32.382%
+		.config__l_11
+			top: 31.6%
+			left: 20.8%
+			width: 32.654%
+		.config__l_12
+			top: 31.5%
+			left: 20.8%
+			width: 32.518%
+			height: 25%	
+	.config__house_3
+		.config__l_1
+			top: 24.1%
+			left: 6.5%
+			width: 86.804%
+			height: 46.072%
+		.config__l_2
+			top: 34%
+			left: 9.9%
+			width: 69.934%
+			height: 34.466%
+		.config__l_3
+			top: 21.4%
+			left: 2.9%
+			width: 89.798%
+			height: 23.036%
+		.config__l_4
+			top: 21.5%
+			left: 2.9%
+			width: 90.478%
+			opacity: 0.3
+		.config__l_5
+			top: 21.5%
+			left: 2.9%
+			width: 90.478%
+			opacity: 0.3
+		.config__l_6
+			top: 34%
+			left: 60.1%
+			width: 19.592%
+			height: 25%
+		.config__l_7
+			top: 34.5%
+			left: 60.1%
+			width: 19.728%
+			height: 28.75%
+		.config__l_8
+			top: 34%
+			left: 59.7%
+			width: 20.274%
+		.config__l_9
+			top: 55.2%
+			left: 43.8%
+			width: 7.484%
+			height: 13.394%
+		.config__l_10
+			top: 55.2%
+			left: 43.7%
+			width: 7.62%
+		.config__l_11
+			top: 35%
+			left: 59.8%
+			width: 20.138%
+		.config__l_12
+			top: 33.9%
+			left: 59.7%
+			width: 20.138%
+			height: 20.716%
 
 
 
