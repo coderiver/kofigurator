@@ -29,19 +29,20 @@ body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4
 .config .config__intro-title { margin-bottom: 50px; font-size: 20px; }
 .config .config__intro-list { *zoom: 1; }
 .config .config__intro-list:after { content: " "; display: table; clear: both; }
-.config .config__intro-item { float: left; margin-left: 50px; cursor: pointer; }
+.config .config__intro-item { float: left; margin-left: 50px; text-decoration: none; }
 .config .config__intro-item:first-child { margin: 0; }
 .config .config__intro-pic { position: relative; margin-bottom: 20px; font-size: 0; }
 .config .config__intro-pic img { max-width: 100%; height: auto; }
 .config .config__intro-number { position: absolute; top: -5px; left: 15px; width: 60px; height: 60px; border-radius: 50%; background: #eb4200; font-size: 24px; color: white; line-height: 60px; }
 .config .config__intro-type { color: #eb4200; font-size: 20px; line-height: 1.2; }
 .config .config__intro-type span { display: block; font-weight: 700; }
+.config .config__in { display: none; }
 .config .config__section { overflow: hidden; }
 .config .config__aside { float: right; width: 200px; margin-left: 25px; }
 @media only screen and (max-width: 767px) { .config .config__aside { float: none; width: 100%; margin: 0 0 15px; } }
 .config .config__wrapper { position: relative; font-size: 0; }
 .config .config__l { position: absolute; }
-.config .config__title { margin-bottom: 10px; font-size: 16px; }
+.config .config__title { margin-bottom: 20px; font-size: 16px; }
 .config .config__accord-item { border-top: 1px solid #dddddd; }
 .config .config__accord-title { position: relative; padding: 10px 15px 10px 0; font-size: 14px; color: #eb4200; cursor: pointer; }
 .config .config__accord-title.is-active:after { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
@@ -57,17 +58,24 @@ body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4
 .config .config__house { *zoom: 1; }
 .config .config__house:after { content: " "; display: table; clear: both; }
 .config .config__house_1 .config__l_1 { top: 24.5%; left: 10%; width: 68.3%; height: 45.358%; }
+.config .config__house_1 .config__l_1 rect { fill: white; }
 .config .config__house_1 .config__l_2 { top: 17.4%; left: 9%; width: 83.81%; height: 55%; }
+.config .config__house_1 .config__l_2 rect { fill: #a4bfc1; }
 .config .config__house_1 .config__l_3 { top: 15%; left: 37%; width: 48.572%; height: 11.608%; }
-.config .config__house_1 .config__l_4 { top: 15%; left: 9.06%; width: 83.82%; opacity: 0.5; }
-.config .config__house_1 .config__l_5 { top: 15%; left: 9%; width: 83.81%; opacity: 0.1; }
+.config .config__house_1 .config__l_3 rect { fill: #8d0b0b; }
+.config .config__house_1 .config__l_4 { top: 15%; left: 9.06%; width: 83.82%; opacity: 0.2; }
+.config .config__house_1 .config__l_5 { top: 15%; left: 9%; width: 83.81%; opacity: 0.2; }
 .config .config__house_1 .config__l_6 { top: 50.4%; left: 9.8%; width: 66.803%; height: 18.93%; }
+.config .config__house_1 .config__l_6 rect { fill: #8e510c; }
 .config .config__house_1 .config__l_7 { top: 50.4%; left: 9.9%; width: 66.803%; height: 18.93%; }
+.config .config__house_1 .config__l_7 rect { fill: #8d510d; }
 .config .config__house_1 .config__l_8 { top: 50%; left: 9.3%; width: 67.62%; }
 .config .config__house_1 .config__l_9 { top: 50%; left: 9.53%; width: 67.22%; }
 .config .config__house_1 .config__l_10 { top: 50%; left: 9.4%; width: 67.483%; height: 2.858%; }
+.config .config__house_1 .config__l_10 rect { fill: #7dacaa; }
 .config .config__house_1 .config__l_11 { top: 50%; left: 9.6%; width: 26.123%; opacity: 0.4; }
 .config .config__house_1 .config__l_12 { top: 52.3%; left: 80.4%; width: 6.667%; height: 14.109%; }
+.config .config__house_1 .config__l_12 rect { fill: #6ea2bf; }
 .config .config__house_1 .config__l_13 { top: 52.3%; left: 80.3%; width: 6.667%; }
 .config .config__house_2 .config__l_1 { top: 31.6%; left: 21.1%; width: 63.266%; height: 43.572%; }
 .config .config__house_2 .config__l_2 { top: 17.4%; left: 12%; width: 75.648%; height: 59.823%; }

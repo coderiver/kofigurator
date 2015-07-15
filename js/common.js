@@ -1,20 +1,72 @@
 head.ready(function() {
 
-// color picker
+// tabs
 (function () {
-	var picker = $('.js-colpick');
-	picker.each(function () {
-		var _this = $(this),
-			svg = _this.data('config');
-		_this.colpick({
-			flat: true,
-			layout: 'hex',
-			submit: 0,
-			onChange: function (hsb, hex, rgb, el, bySetColor) {
-				$('.' + svg).css('fill', '#' + hex);
-			}
-		})
+	var link = $('.js-config-link'),
+		intro = $('.js-config-intro'),
+		container = $('.js-config-in'),
+		hash = window.location.hash;
+
+	function loadHouse (hash, typeShow) {
+		var house = hash.substr(2);
+		container.load('houses/' + house + '.html', function() {
+			configColours();
+		});
+		intro.hide();
+		if (typeShow == 'fadeIn') {
+			container.fadeIn();
+		}
+		if (typeShow == 'show') {
+			container.show();
+		}
+	}
+	loadHouse(hash, 'show');
+
+	$(window).on( 'hashchange', function() {
+		var hash = window.location.hash;
+		if (hash == '') {
+			container.hide();
+			intro.show();
+		}
+		else {
+			loadHouse(hash, 'fadeIn');
+		}
 	});
+
+}());
+
+// color picker
+function configColours () {
+	var picker = $('.js-colpick');
+		picker.each(function () {
+			var _this = $(this),
+				svg = _this.data('config'),
+				defaultColor = _this.data('default');
+			_this.colpick({
+				flat: true,
+				layout: 'rgbhex',
+				submit: 0,
+				color: defaultColor,
+				onChange: function (hsb, hex, rgb, el, bySetColor) {
+					$('.' + svg).css('fill', 'rgb(' + rgb.r + ', ' + rgb.g + ', '+ rgb.b + ')');
+					_this.next().val(rgb.r + ',' + rgb.g + ',' + rgb.b);
+
+
+					var str = $('.js-config-form').serializeArray();
+					
+					for (var i = 0; i <= str.length; i++) {
+						// console.log(str[i]);
+						if (str[i].value == '') {
+							console.log(str[i]);
+						};
+					};
+
+					// console.log(str);
+
+
+				}
+			})
+		});
 
 	var accordTitle = $('.js-config-accord-title'),
 		accordBody = $('.js-config-accord-body');
@@ -51,6 +103,6 @@ head.ready(function() {
 			}
 		}
 	});
-}());
+}
 	
 });
