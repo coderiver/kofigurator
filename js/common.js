@@ -9,7 +9,7 @@ head.ready(function() {
 
 	function loadHouse (hash, typeShow) {
 		if (hash) {
-			var house = hash.substr(2);
+			var house = hash.substr(2,6);
 			container.load('houses/' + house + '.html', function() {
 				configColours();
 			});
@@ -24,7 +24,7 @@ head.ready(function() {
 	}
 	loadHouse(hash, 'show');
 
-	$(window).on( 'hashchange', function() {
+	$(window).on('hashchange', function() {
 		var hash = window.location.hash;
 		if (hash == '') {
 			container.hide();
@@ -43,7 +43,8 @@ function configColours () {
 		picker.each(function () {
 			var _this = $(this),
 				svg = _this.data('config'),
-				defaultColor = _this.data('default');
+				defaultColor = _this.data('default'),
+				hash = window.location.hash;
 			_this.colpick({
 				flat: true,
 				layout: 'rgbhex',
@@ -54,20 +55,27 @@ function configColours () {
 
 					_this.next().val(rgb.r + ',' + rgb.g + ',' + rgb.b);
 
-					// var data = [],
-					// 	str = '';
-					// $('.js-colpick-val').each(function (i) {
-					// 	var _this = $(this),
-					// 		value = _this.val(),
-					// 		name = _this.attr('name');
-					// 	if (value.length > 0) {
-					// 		data[i] = value;
-					// 	};
+					var data = '';
 
-					// });
-					// console.log(data.join(", "));
-					var str = $('.js-colpick-val').serializeArray();
-					console.log(str);
+					var str = $('.js-config-form').serializeArray();
+
+					str.map(function(i, j) {
+						if (i.value !== '') {
+							data += '&';
+							data += i.name;
+							data += '=';
+							data += i.value;
+						};
+						
+					});
+
+					
+					window.location.hash = hash + data;
+
+					console.log(data);
+
+					
+					// 1=value&2=value if value != ''
 					
 					
 				}
