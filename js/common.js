@@ -8,17 +8,19 @@ head.ready(function() {
 		hash = window.location.hash;
 
 	function loadHouse (hash, typeShow) {
-		var house = hash.substr(2);
-		container.load('houses/' + house + '.html', function() {
-			configColours();
-		});
-		intro.hide();
-		if (typeShow == 'fadeIn') {
-			container.fadeIn();
-		}
-		if (typeShow == 'show') {
-			container.show();
-		}
+		if (hash) {
+			var house = hash.substr(2);
+			container.load('houses/' + house + '.html', function() {
+				configColours();
+			});
+			intro.hide();
+			if (typeShow == 'fadeIn') {
+				container.fadeIn();
+			}
+			if (typeShow == 'show') {
+				container.show();
+			}
+		};
 	}
 	loadHouse(hash, 'show');
 
@@ -49,21 +51,25 @@ function configColours () {
 				color: defaultColor,
 				onChange: function (hsb, hex, rgb, el, bySetColor) {
 					$('.' + svg).css('fill', 'rgb(' + rgb.r + ', ' + rgb.g + ', '+ rgb.b + ')');
+
 					_this.next().val(rgb.r + ',' + rgb.g + ',' + rgb.b);
 
+					// var data = [],
+					// 	str = '';
+					// $('.js-colpick-val').each(function (i) {
+					// 	var _this = $(this),
+					// 		value = _this.val(),
+					// 		name = _this.attr('name');
+					// 	if (value.length > 0) {
+					// 		data[i] = value;
+					// 	};
 
-					var str = $('.js-config-form').serializeArray();
+					// });
+					// console.log(data.join(", "));
+					var str = $('.js-colpick-val').serializeArray();
+					console.log(str);
 					
-					for (var i = 0; i <= str.length; i++) {
-						// console.log(str[i]);
-						if (str[i].value == '') {
-							console.log(str[i]);
-						};
-					};
-
-					// console.log(str);
-
-
+					
 				}
 			})
 		});

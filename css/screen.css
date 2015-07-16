@@ -78,26 +78,40 @@ body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4
 .config .config__house_1 .config__l_12 rect { fill: #6ea2bf; }
 .config .config__house_1 .config__l_13 { top: 52.3%; left: 80.3%; width: 6.667%; }
 .config .config__house_2 .config__l_1 { top: 31.6%; left: 21.1%; width: 63.266%; height: 43.572%; }
+.config .config__house_2 .config__l_1 rect { fill: white; }
 .config .config__house_2 .config__l_2 { top: 17.4%; left: 12%; width: 75.648%; height: 59.823%; }
+.config .config__house_2 .config__l_2 rect { fill: #9df9a9; }
 .config .config__house_2 .config__l_3 { top: 12.6%; left: 8.6%; width: 84.9%; height: 34.644%; }
+.config .config__house_2 .config__l_3 rect { fill: #535252; }
 .config .config__house_2 .config__l_4 { top: 12.6%; left: 8.3%; width: 85.444%; opacity: 0.5; }
 .config .config__house_2 .config__l_5 { top: 12.6%; left: 8.6%; width: 84.9%; opacity: 0.5; }
 .config .config__house_2 .config__l_6 { top: 58.3%; left: 65.7%; width: 18.777%; height: 14.288%; }
+.config .config__house_2 .config__l_6 rect { fill: #3f9f6e; }
 .config .config__house_2 .config__l_7 { top: 58.3%; left: 65.7%; width: 18.777%; }
 .config .config__house_2 .config__l_8 { top: 31.6%; left: 20.8%; width: 32.382%; height: 43.74%; }
+.config .config__house_2 .config__l_8 rect { fill: #3f9f6e; }
 .config .config__house_2 .config__l_9 { top: 31.6%; left: 20.8%; width: 32.382%; height: 43.74%; }
+.config .config__house_2 .config__l_9 rect { fill: #3f9f6e; }
 .config .config__house_2 .config__l_10 { top: 31.6%; left: 21%; width: 32.382%; }
 .config .config__house_2 .config__l_11 { top: 31.6%; left: 20.8%; width: 32.654%; }
 .config .config__house_2 .config__l_12 { top: 31.5%; left: 20.8%; width: 32.518%; height: 25%; }
+.config .config__house_2 .config__l_12 rect { fill: #3f9f6e; }
 .config .config__house_3 .config__l_1 { top: 24.1%; left: 6.5%; width: 86.804%; height: 46.072%; }
+.config .config__house_3 .config__l_1 rect { fill: #97f8cd; }
 .config .config__house_3 .config__l_2 { top: 34%; left: 9.9%; width: 69.934%; height: 34.466%; }
+.config .config__house_3 .config__l_2 rect { fill: #faa266; }
 .config .config__house_3 .config__l_3 { top: 21.4%; left: 2.9%; width: 89.798%; height: 23.036%; }
-.config .config__house_3 .config__l_4 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.3; }
-.config .config__house_3 .config__l_5 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.3; }
+.config .config__house_3 .config__l_3 rect { fill: #cb0e3d; }
+.config .config__house_3 .config__l_4 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.2; }
+.config .config__house_3 .config__l_5 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.2; }
 .config .config__house_3 .config__l_6 { top: 34%; left: 60.1%; width: 19.592%; height: 25%; }
+.config .config__house_3 .config__l_6 rect { fill: #9e9e9e; }
 .config .config__house_3 .config__l_7 { top: 34.5%; left: 60.1%; width: 19.728%; height: 28.75%; }
+.config .config__house_3 .config__l_7 rect { fill: #9e9e9e; }
 .config .config__house_3 .config__l_8 { top: 34%; left: 59.7%; width: 20.274%; }
 .config .config__house_3 .config__l_9 { top: 55.2%; left: 43.8%; width: 7.484%; height: 13.394%; }
+.config .config__house_3 .config__l_9 rect { fill: #fca467; }
 .config .config__house_3 .config__l_10 { top: 55.2%; left: 43.7%; width: 7.62%; }
 .config .config__house_3 .config__l_11 { top: 35%; left: 59.8%; width: 20.138%; }
 .config .config__house_3 .config__l_12 { top: 33.9%; left: 59.7%; width: 20.138%; height: 20.716%; }
+.config .config__house_3 .config__l_12 rect { fill: #9e9e9e; }
