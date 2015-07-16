@@ -67,7 +67,7 @@ body
 // common blocks
 .config
 	max-width: 960px
-	margin: 0 auto
+	margin: 0 auto 20px
 	padding: 0 20px
 	+nosel
 	+r(767)
@@ -82,13 +82,14 @@ body
 		margin-bottom: 50px
 		font-size: 20px
 	.config__intro-list
-		+clr
+		font-size: 0
+		text-align: center
 	.config__intro-item
-		float: left
+		display: inline-block
 		margin-left: 50px
 		text-decoration: none
-		&:first-child
-			margin: 0
+		vertical-align: top
+		margin: 0 18px 20px
 	.config__intro-pic
 		position: relative
 		margin-bottom: 20px
@@ -202,22 +203,16 @@ body
 			left: 10%
 			width: 68.3%
 			height: 45.358%
-			rect
-				fill: #ffffff
 		.config__l_2
 			top: 17.4%
 			left: 9%
 			width: 83.81%
 			height: 55%
-			rect
-				fill: #A4BFC1
 		.config__l_3
 			top: 15%
 			left: 37%
 			width: 48.572%
 			height: 11.608%
-			rect
-				fill: #8D0B0B
 		.config__l_4
 			top: 15%
 			left: 9.06%
@@ -233,15 +228,11 @@ body
 			left: 9.8%
 			width: 66.803%
 			height: 18.93%
-			rect
-				fill: #8E510C
 		.config__l_7
 			top: 50.4%
 			left: 9.9%
 			width: 66.803%
 			height: 18.93%
-			rect
-				fill: #8D510D
 		.config__l_8
 			top: 50%
 			left: 9.3%
@@ -255,8 +246,6 @@ body
 			left: 9.4%
 			width: 67.483%
 			height: 2.858%
-			rect
-				fill: #7DACAA
 		.config__l_11
 			top: 50%
 			left: 9.6%
@@ -267,8 +256,6 @@ body
 			left: 80.4%
 			width: 6.667%
 			height: 14.109%
-			rect
-				fill: #6EA2BF
 		.config__l_13
 			top: 52.3%
 			left: 80.3%
@@ -279,22 +266,16 @@ body
 			left: 21.1%
 			width: 63.266%
 			height: 43.572%
-			rect
-				fill: #ffffff
 		.config__l_2
 			top: 17.4%
 			left: 12%
 			width: 75.648%
 			height: 59.823%
-			rect
-				fill: #9DF9A9
 		.config__l_3
 			top: 12.6%
 			left: 8.6%
 			width: 84.9%
 			height: 34.644%
-			rect
-				fill: #535252
 		.config__l_4
 			top: 12.6%
 			left: 8.3%
@@ -310,8 +291,6 @@ body
 			left: 65.7%
 			width: 18.777%
 			height: 14.288%
-			rect
-				fill: #3F9F6E
 		.config__l_7
 			top: 58.3%
 			left: 65.7%
@@ -321,15 +300,11 @@ body
 			left: 20.8%
 			width: 32.382%
 			height: 43.74%
-			rect
-				fill: #3F9F6E
 		.config__l_9
 			top: 31.6%
 			left: 20.8%
 			width: 32.382%
 			height: 43.74%
-			rect
-				fill: #3F9F6E
 		.config__l_10
 			top: 31.6%
 			left: 21%
@@ -343,30 +318,22 @@ body
 			left: 20.8%
 			width: 32.518%
 			height: 25%
-			rect
-				fill: #3F9F6E
 	.config__house_3
 		.config__l_1
 			top: 24.1%
 			left: 6.5%
 			width: 86.804%
 			height: 46.072%
-			rect
-				fill: #97F8CD
 		.config__l_2
 			top: 34%
 			left: 9.9%
 			width: 69.934%
 			height: 34.466%
-			rect
-				fill: #FAA266
 		.config__l_3
 			top: 21.4%
 			left: 2.9%
 			width: 89.798%
 			height: 23.036%
-			rect
-				fill: #CB0E3D
 		.config__l_4
 			top: 21.5%
 			left: 2.9%
@@ -382,15 +349,11 @@ body
 			left: 60.1%
 			width: 19.592%
 			height: 25%
-			rect
-				fill: #9E9E9E
 		.config__l_7
 			top: 34.5%
 			left: 60.1%
 			width: 19.728%
 			height: 28.75%
-			rect
-				fill: #9E9E9E
 		.config__l_8
 			top: 34%
 			left: 59.7%
@@ -400,8 +363,6 @@ body
 			left: 43.8%
 			width: 7.484%
 			height: 13.394%
-			rect
-				fill: #FCA467
 		.config__l_10
 			top: 55.2%
 			left: 43.7%
@@ -415,11 +376,45 @@ body
 			left: 59.7%
 			width: 20.138%
 			height: 20.716%
-			rect
-				fill: #9E9E9E
+	.config__foot
+		margin-right: 225px
+		padding-top: 20px
+		+clr
+		+r(767)
+			margin: 0
+	.config__link
+		float: left
+		margin-top: 10px
+		text-decoration: none
+		font-size: 14px
+		color: $orange
+		+tr(color .2s)
+		+r(767)
+			display: block
+			float: none
+			margin-bottom: 20px
+		&:hover
+			color: #555 
+	.config__btn
+		float: right
+		background: $orange
+		color: #fff
+		+r(767)
+			float: none 
 
-
-
+.btn
+	display: inline-block
+	padding: 14px 36px 13px
+	line-height: 1
+	font-size: 13px 
+	text-transform: uppercase
+	background: $orange 
+	color: #fff 
+	+transition(border-radius, background, .2s)
+	&:hover
+		border-radius: 40px 
+	&:active
+		background: $orange 
 
 
 
