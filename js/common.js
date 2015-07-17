@@ -9,11 +9,11 @@ head.ready(function() {
 		containerLoad = $('.js-config-load'),
 		btnSend = $('.js-config-send'),
 		hash = window.location.hash;
-	function loadHouse (hash, typeShow) {
+	function loadHouse (hash) {
 		if (hash) {
 			var house = hash.substr(2,6),
 				colours = hash.substr(9).split('&');
-			// loade house
+			// load house
 			containerLoad.load('houses/' + house + '.html', function() {
 				configColours();
 				// colours
@@ -39,19 +39,68 @@ head.ready(function() {
 			});
 			// show/hide blocks
 			intro.hide();
-			if (typeShow == 'fadeIn') {
-				container.fadeIn();
-			}
-			if (typeShow == 'show') {
-				container.show();
-			}
+			container.fadeIn();
 		};
 	}
-	loadHouse(hash, 'show');
+	// preload
+	var preload = ['img/house1/p0.png',
+				   'img/house1/p1.png',
+				   'img/house1/p2.png',
+				   'img/house1/p3.png',
+				   'img/house1/p4.png',
+				   'img/house1/p5.png',
+				   'img/house1/p6.png',
+				   'img/house1/p7.png',
+				   'img/house1/p8.png',
+				   'img/house1/p9.png',
+				   'img/house1/p10.png',
+				   'img/house1/p11.png',
+				   'img/house1/p12.png',
+				   'img/house1/p13.png',
+				   'img/house2/p0.png',
+				   'img/house2/p1.png',
+				   'img/house2/p2.png',
+				   'img/house2/p3.png',
+				   'img/house2/p4.png',
+				   'img/house2/p5.png',
+				   'img/house2/p6.png',
+				   'img/house2/p7.png',
+				   'img/house2/p8.png',
+				   'img/house2/p9.png',
+				   'img/house2/p10.png',
+				   'img/house2/p11.png',
+				   'img/house2/p12.png',
+				   'img/house3/p0.png',
+				   'img/house3/p1.png',
+				   'img/house3/p2.png',
+				   'img/house3/p3.png',
+				   'img/house3/p4.png',
+				   'img/house3/p5.png',
+				   'img/house3/p6.png',
+				   'img/house3/p7.png',
+				   'img/house3/p8.png',
+				   'img/house3/p9.png',
+				   'img/house3/p10.png',
+				   'img/house3/p11.png',
+				   'img/house3/p12.png']
+	var promises = [];
+	for (var i = 0; i < preload.length; i++) {
+	    (function(url, promise) {
+	        var img = new Image();
+	        img.onload = function() {
+	        	promise.resolve();
+	        };
+	        img.src = url;
+	    })(preload[i], promises[i] = $.Deferred());
+	}
+	$.when.apply($, promises).done(function() {
+		// load house
+		loadHouse(hash);
+	});
 	// go
 	link.on('click', function () {
 		var hash = $(this).attr('href');
-		loadHouse(hash, 'fadeIn');
+		loadHouse(hash);
 	});
 	// back
 	linkBack.on('click', function () {
@@ -67,11 +116,8 @@ head.ready(function() {
 		        theCanvas = canvas;
 		        document.body.appendChild(canvas);
 
-		        // Convert and download as image 
-		        Canvas2Image.saveAsPNG(canvas); 
+		        // Canvas2Image.saveAsPNG(canvas);
 		        $("#ppp").append(canvas);
-		        // Clean up 
-		        //document.body.removeChild(canvas);
 		    }
 		});
 	});
