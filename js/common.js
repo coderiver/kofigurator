@@ -2,46 +2,6 @@ head.ready(function() {
 
 // tabs
 (function () {
-	var link = $('.js-config-link'),
-		linkBack = $('.js-config-back'),
-		intro = $('.js-config-intro'),
-		container = $('.js-config-in'),
-		containerLoad = $('.js-config-load'),
-		btnSend = $('.js-config-send'),
-		hash = window.location.hash;
-	function loadHouse (hash) {
-		if (hash) {
-			var house = hash.substr(2,6),
-				colours = hash.substr(9).split('&');
-			// load house
-			containerLoad.load('houses/' + house + '.html', function() {
-				configColours();
-				// colours
-				colours.map(function(i, j) {
-					var name = i.substr(0,1),
-						value = i.substr(2);
-					$('.js-colpick-val').each(function () {
-						var _this = $(this),
-							colpickEl = _this.prev(),
-							inputName = _this.attr('name');
-						if (inputName == name) {
-							_this.val(value);
-							var rgbArray = value.split(',');
-							var rgb = {
-								'r': rgbArray[0],
-								'g': rgbArray[1],
-								'b': rgbArray[2]
-							};
-							colpickEl.colpickSetColor(rgb, true);
-						};
-					});
-				});
-			});
-			// show/hide blocks
-			intro.hide();
-			container.fadeIn();
-		};
-	}
 	// preload
 	var preload = ['img/house1/p0.png',
 				   'img/house1/p1.png',
@@ -94,31 +54,72 @@ head.ready(function() {
 	    })(preload[i], promises[i] = $.Deferred());
 	}
 	$.when.apply($, promises).done(function() {
+		// after all pictures are loaded
+		var link = $('.js-config-link'),
+			linkBack = $('.js-config-back'),
+			intro = $('.js-config-intro'),
+			container = $('.js-config-in'),
+			containerLoad = $('.js-config-load'),
+			btnSend = $('.js-config-send'),
+			hash = window.location.hash;
+		function loadHouse (hash) {
+			if (hash) {
+				var house = hash.substr(2,6),
+					colours = hash.substr(9).split('&');
+				// load house
+				containerLoad.load('houses/' + house + '.html', function() {
+					configColours();
+					// colours
+					colours.map(function(i, j) {
+						var name = i.substr(0,1),
+							value = i.substr(2);
+						$('.js-colpick-val').each(function () {
+							var _this = $(this),
+								colpickEl = _this.prev(),
+								inputName = _this.attr('name');
+							if (inputName == name) {
+								_this.val(value);
+								var rgbArray = value.split(',');
+								var rgb = {
+									'r': rgbArray[0],
+									'g': rgbArray[1],
+									'b': rgbArray[2]
+								};
+								colpickEl.colpickSetColor(rgb, true);
+							};
+						});
+					});
+				});
+				// show/hide blocks
+				intro.hide();
+				container.fadeIn();
+			};
+		}
 		// load house
 		loadHouse(hash);
-	});
-	// go
-	link.on('click', function () {
-		var hash = $(this).attr('href');
-		loadHouse(hash);
-	});
-	// back
-	linkBack.on('click', function () {
-		var hash = $(this).attr('href');
-		window.location.hash = hash;
-		container.hide();
-		intro.fadeIn();
-	});
-	// send
-	btnSend.on('click', function () {
-		html2canvas($('#config'), {
-		    onrendered: function(canvas) {
-		        theCanvas = canvas;
-		        document.body.appendChild(canvas);
+		// go
+		link.on('click', function () {
+			var hash = $(this).attr('href');
+			loadHouse(hash);
+		});
+		// back
+		linkBack.on('click', function () {
+			var hash = $(this).attr('href');
+			window.location.hash = hash;
+			container.hide();
+			intro.fadeIn();
+		});
+		// send
+		btnSend.on('click', function () {
+			html2canvas($('#config'), {
+				onrendered: function(canvas) {
+					theCanvas = canvas;
+					document.body.appendChild(canvas);
 
-		        // Canvas2Image.saveAsPNG(canvas);
-		        $("#ppp").append(canvas);
-		    }
+					// Canvas2Image.saveAsPNG(canvas);
+					$("#ppp").append(canvas);
+				}
+			});
 		});
 	});
 }());
