@@ -108,6 +108,7 @@ head.ready(function() {
 			window.location.hash = hash;
 			container.hide();
 			intro.fadeIn();
+			return false;
 		});
 		// send
 		btnSend.on('click', function () {

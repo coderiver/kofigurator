@@ -22,7 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555555; }
 
-.config { max-width: 960px; margin: 0 auto 20px; padding: 0 20px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.config { max-width: 960px; min-height: 620px; margin: 0 auto 20px; padding: 0 20px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 @media only screen and (max-width: 767px) { .config { padding: 0 10px; } }
 .config img { display: block; max-width: 100%; }
 .config .config__intro { min-height: 560px; text-align: center; }
