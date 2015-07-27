@@ -67,17 +67,19 @@ body
 // common blocks
 .config
 	max-width: 960px
-	min-height: 620px
+	min-height: 590px
 	margin: 0 auto 20px
 	padding: 0 20px
 	+nosel
+	+r(1023)
+		min-height: 0
 	+r(767)
 		padding: 0 10px
 	img
 		display: block
 		max-width: 100%
+		height: auto
 	.config__intro
-		min-height: 560px
 		text-align: center
 	.config__intro-title
 		margin-bottom: 50px
@@ -87,17 +89,20 @@ body
 		text-align: center
 	.config__intro-item
 		display: inline-block
-		margin-left: 50px
+		width: 33.33%
 		text-decoration: none
 		vertical-align: top
-		margin: 0 18px 20px
+		padding: 0 18px 20px
+		+r(767)
+			width: 100%
+			padding: 0 0 30px
+			text-align: center 
 	.config__intro-pic
+		display: inline-block
 		position: relative
 		margin-bottom: 20px
 		font-size: 0
-		img
-			max-width: 100%
-			height: auto
+		vertical-align: top
 	.config__intro-number
 		position: absolute
 		top: -5px
