@@ -26,6 +26,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555555; }
+body.no-scroll { overflow: hidden; }
 
 .config { max-width: 960px; min-height: 590px; margin: 0 auto 20px; padding: 0 20px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 @media only screen and (max-width: 1023px) { .config { min-height: 0; } }
@@ -98,15 +99,22 @@ body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4
 .config .config__house_3 .config__l_10 { top: 55.2%; left: 43.7%; width: 7.62%; }
 .config .config__house_3 .config__l_11 { top: 35%; left: 59.8%; width: 20.138%; }
 .config .config__house_3 .config__l_12 { top: 33.9%; left: 59.7%; width: 20.138%; height: 20.716%; }
-.config .config__foot { margin-right: 225px; padding-top: 20px; *zoom: 1; }
+.config .config__foot { padding-top: 20px; *zoom: 1; }
 .config .config__foot:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 767px) { .config .config__foot { margin: 0; } }
 .config .config__link { float: left; margin-top: 10px; text-decoration: none; font-size: 14px; color: #eb4200; -webkit-transition: color 0.2s; -moz-transition: color 0.2s; -o-transition: color 0.2s; transition: color 0.2s; }
 @media only screen and (max-width: 767px) { .config .config__link { display: block; float: none; margin-bottom: 20px; } }
 .config .config__link:hover { color: #555555; }
 .config .config__btn { float: right; background: #eb4200; color: white; }
 @media only screen and (max-width: 767px) { .config .config__btn { float: none; } }
 
-.btn { display: inline-block; padding: 14px 36px 13px; line-height: 1; font-size: 13px; text-transform: uppercase; background: #eb4200; color: white; -webkit-transition: border-radius, background, 0.2s; -moz-transition: border-radius, background, 0.2s; -o-transition: border-radius, background, 0.2s; transition: border-radius, background, 0.2s; }
-.btn:hover { border-radius: 40px; }
-.btn:active { background: #eb4200; }
+.popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; }
+.popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popup .popup__in { display: inline-block; position: relative; width: 600px; background: white; vertical-align: middle; text-align: left; }
+.popup .popup__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
+.popup .popup__close:before, .popup .popup__close:after { content: ""; position: absolute; background: white; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.popup .popup__close:before { top: 14px; left: 5px; width: 20px; height: 2px; }
+.popup .popup__close:after { top: 5px; left: 14px; width: 2px; height: 20px; }
+.popup .popup__msg { padding: 20px; border: 1px solid #dddddd; font-size: 16px; }
+.popup .form { margin: 0; }
+.popup .form__foot { padding: 0 15px 20px; text-align: center; }
+.popup .form-error { padding-top: 3px; font-size: 12px; color: #b94a48; }

@@ -2,126 +2,114 @@ head.ready(function() {
 
 // tabs
 (function () {
-	// preload
-	var preload = ['img/house1/p0.png',
-				   'img/house1/p1.png',
-				   'img/house1/p2.png',
-				   'img/house1/p3.png',
-				   'img/house1/p4.png',
-				   'img/house1/p5.png',
-				   'img/house1/p6.png',
-				   'img/house1/p7.png',
-				   'img/house1/p8.png',
-				   'img/house1/p9.png',
-				   'img/house1/p10.png',
-				   'img/house1/p11.png',
-				   'img/house1/p12.png',
-				   'img/house1/p13.png',
-				   'img/house2/p0.png',
-				   'img/house2/p1.png',
-				   'img/house2/p2.png',
-				   'img/house2/p3.png',
-				   'img/house2/p4.png',
-				   'img/house2/p5.png',
-				   'img/house2/p6.png',
-				   'img/house2/p7.png',
-				   'img/house2/p8.png',
-				   'img/house2/p9.png',
-				   'img/house2/p10.png',
-				   'img/house2/p11.png',
-				   'img/house2/p12.png',
-				   'img/house3/p0.png',
-				   'img/house3/p1.png',
-				   'img/house3/p2.png',
-				   'img/house3/p3.png',
-				   'img/house3/p4.png',
-				   'img/house3/p5.png',
-				   'img/house3/p6.png',
-				   'img/house3/p7.png',
-				   'img/house3/p8.png',
-				   'img/house3/p9.png',
-				   'img/house3/p10.png',
-				   'img/house3/p11.png',
-				   'img/house3/p12.png']
-	var promises = [];
-	for (var i = 0; i < preload.length; i++) {
-	    (function(url, promise) {
-	        var img = new Image();
-	        img.onload = function() {
-	        	promise.resolve();
-	        };
-	        img.src = url;
-	    })(preload[i], promises[i] = $.Deferred());
-	}
-	$.when.apply($, promises).done(function() {
-		// after all pictures are loaded
-		var link = $('.js-config-link'),
-			linkBack = $('.js-config-back'),
-			intro = $('.js-config-intro'),
-			container = $('.js-config-in'),
-			containerLoad = $('.js-config-load'),
-			btnSend = $('.js-config-send'),
-			hash = window.location.hash;
-		function loadHouse (hash) {
-			if (hash) {
-				var house = hash.substr(2,6),
-					colours = hash.substr(9).split('&');
-				// load house
-				containerLoad.load('houses/' + house + '.html', function() {
-					configColours();
-					// colours
-					colours.map(function(i, j) {
-						var name = i.substr(0,1),
-							value = i.substr(2);
-						$('.js-colpick-val').each(function () {
-							var _this = $(this),
-								colpickEl = _this.prev(),
-								inputName = _this.attr('name');
-							if (inputName == name) {
-								_this.val(value);
-								var rgbArray = value.split(',');
-								var rgb = {
-									'r': rgbArray[0],
-									'g': rgbArray[1],
-									'b': rgbArray[2]
-								};
-								colpickEl.colpickSetColor(rgb, true);
+	// after all pictures are loaded
+	var link = $('.js-config-link'),
+		linkBack = $('.js-config-back'),
+		intro = $('.js-config-intro'),
+		container = $('.js-config-in'),
+		containerLoad = $('.js-config-load'),
+		hash = window.location.hash;
+	function loadHouse (hash) {
+		if (hash) {
+			var house = hash.substr(2,6),
+				colours = hash.substr(9).split('&');
+			// load house
+			containerLoad.load('houses/' + house + '.html', function() {
+				configColours();
+				// colours
+				colours.map(function(i, j) {
+					var name = i.substr(0,1),
+						value = i.substr(2);
+					$('.js-colpick-val').each(function () {
+						var _this = $(this),
+							colpickEl = _this.prev(),
+							inputName = _this.attr('name');
+						if (inputName == name) {
+							_this.val(value);
+							var rgbArray = value.split(',');
+							var rgb = {
+								'r': rgbArray[0],
+								'g': rgbArray[1],
+								'b': rgbArray[2]
 							};
-						});
+							colpickEl.colpickSetColor(rgb, true);
+						};
 					});
 				});
-				// show/hide blocks
-				intro.hide();
-				container.fadeIn();
-			};
-		}
-		// load house
+			});
+			// show/hide blocks
+			intro.hide();
+			container.fadeIn();
+		};
+	}
+	// load house
+	loadHouse(hash);
+	// go
+	link.on('click', function () {
+		var hash = $(this).attr('href');
 		loadHouse(hash);
-		// go
-		link.on('click', function () {
-			var hash = $(this).attr('href');
-			loadHouse(hash);
-		});
-		// back
-		linkBack.on('click', function () {
-			var hash = $(this).attr('href');
-			window.location.hash = hash;
-			container.hide();
-			intro.fadeIn();
-			return false;
-		});
-		// send
-		btnSend.on('click', function () {
-			html2canvas($('#config'), {
-				onrendered: function(canvas) {
-					theCanvas = canvas;
-					document.body.appendChild(canvas);
+	});
+	// back
+	linkBack.on('click', function () {
+		var hash = $(this).attr('href');
+		window.location.hash = hash;
+		container.hide();
+		intro.fadeIn();
+		return false;
+	});
+}());
 
-					// Canvas2Image.saveAsPNG(canvas);
-					$("#ppp").append(canvas);
+// send
+(function () {
+	$('body').on('click', '.js-config-send', function () {
+		var url = window.location.href;
+
+		// ajax form
+		(function () {
+			var form = $('.js-form'),
+				result = $('.js-form-res'),
+				inputEmail = $('input[name=email]'),
+				inputUrl = $('input[name=url]');
+
+			$.validate({
+				scrollToTopOnError : false,
+				onSuccess : function() {
+
+					inputUrl.val(url);
+
+					postData = {
+					    'email': inputEmail.val(), 
+					    'url': inputUrl.val()
+					};
+					console.log(postData);
+					// ajax post data to server
+					$.post('*.php', postData, function (response){
+
+					}, 'json');
+					return false;
+
 				}
 			});
-		});
+
+		}());
+
+	});
+}());
+
+// popup
+(function () {
+	var body = $('body'),
+		popup = $('.js-popup'),
+		popupClose = $('.js-popup-close');
+	body.on('click', '.js-popup-open', function () {
+		var item = $(this).data('popup');
+		body.addClass('no-scroll');
+		$('.' + item).fadeIn();
+		return false;
+	});
+	popupClose.on('click', function () {
+		body.removeClass('no-scroll');
+		popup.fadeOut();
 	});
 }());
 
