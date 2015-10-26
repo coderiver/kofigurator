@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -20,12 +21,12 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555555; }
+body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555; }
 body.no-scroll { overflow: hidden; }
 
 .config { max-width: 960px; min-height: 590px; margin: 0 auto 20px; padding: 0 20px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
@@ -38,7 +39,7 @@ body.no-scroll { overflow: hidden; }
 .config .config__intro-item { display: inline-block; width: 33.33%; text-decoration: none; vertical-align: top; padding: 0 18px 20px; }
 @media only screen and (max-width: 767px) { .config .config__intro-item { width: 100%; padding: 0 0 30px; text-align: center; } }
 .config .config__intro-pic { display: inline-block; position: relative; margin-bottom: 20px; font-size: 0; vertical-align: top; }
-.config .config__intro-number { position: absolute; top: -5px; left: 15px; width: 60px; height: 60px; border-radius: 50%; background: #eb4200; font-size: 24px; color: white; line-height: 60px; }
+.config .config__intro-number { position: absolute; top: -5px; left: 15px; width: 60px; height: 60px; border-radius: 50%; background: #eb4200; font-size: 24px; color: #FFF; line-height: 60px; }
 .config .config__intro-type { color: #eb4200; font-size: 20px; line-height: 1.2; }
 .config .config__intro-type span { display: block; font-weight: 700; }
 .config .config__in { display: none; }
@@ -48,13 +49,13 @@ body.no-scroll { overflow: hidden; }
 .config .config__wrapper { position: relative; font-size: 0; }
 .config .config__l { position: absolute; }
 .config .config__title { margin-bottom: 20px; font-size: 16px; }
-.config .config__accord-item { border-top: 1px solid #dddddd; }
+.config .config__accord-item { border-top: 1px solid #ddd; }
 .config .config__accord-title { position: relative; padding: 10px 15px 10px 0; font-size: 14px; color: #eb4200; cursor: pointer; }
 .config .config__accord-title.is-active:after { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.config .config__accord-title:after { content: "\f107"; position: absolute; right: 0; top: 50%; margin-top: -9px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 18px; -webkit-transition: -webkit-transform 0.2s; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; transition: transform 0.2s; }
+.config .config__accord-title:after { content: ""; position: absolute; right: 0; top: 50%; margin-top: -9px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 18px; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; }
 .config .config__accord-body { display: none; }
 .config .config__accord-body .config__accord-title { padding-left: 20px; }
-.config .config__accord-body .config__accord-title:before { content: ""; position: absolute; top: 50%; left: 0; width: 6px; height: 6px; margin-top: -3px; background: #dddddd; border-radius: 50%; }
+.config .config__accord-body .config__accord-title:before { content: ""; position: absolute; top: 50%; left: 0; width: 6px; height: 6px; margin-top: -3px; background: #ddd; border-radius: 50%; }
 .config .config__colpick .colpick { width: 200px; height: 160px; padding-bottom: 10px; background: none; border: none; border-radius: 0; }
 .config .config__colpick .colpick_color { top: 0; left: 0; outline: none; }
 .config .config__colpick .colpick_color, .config .config__colpick .colpick_color_overlay1, .config .config__colpick .colpick_color_overlay2 { width: 160px; height: 160px; }
@@ -101,20 +102,22 @@ body.no-scroll { overflow: hidden; }
 .config .config__house_3 .config__l_12 { top: 33.9%; left: 59.7%; width: 20.138%; height: 20.716%; }
 .config .config__foot { padding-top: 20px; *zoom: 1; }
 .config .config__foot:after { content: " "; display: table; clear: both; }
-.config .config__link { float: left; margin-top: 10px; text-decoration: none; font-size: 14px; color: #eb4200; -webkit-transition: color 0.2s; -moz-transition: color 0.2s; -o-transition: color 0.2s; transition: color 0.2s; }
+.config .config__link { float: left; margin-top: 10px; text-decoration: none; font-size: 14px; color: #eb4200; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 @media only screen and (max-width: 767px) { .config .config__link { display: block; float: none; margin-bottom: 20px; } }
-.config .config__link:hover { color: #555555; }
-.config .config__btn { float: right; background: #eb4200; color: white; }
+.config .config__link:hover { color: #555; }
+.config .config__btn { float: right; background: #eb4200; color: #fff; margin-right: 15px; }
+.config .config__btn:nth-child(2) { margin-right: 0; }
+@media only screen and (max-width: 767px) { .config .config__btn:nth-child(2) { float: right; } }
 @media only screen and (max-width: 767px) { .config .config__btn { float: none; } }
 
 .popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; }
 .popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popup .popup__in { display: inline-block; position: relative; width: 600px; background: white; vertical-align: middle; text-align: left; }
+.popup .popup__in { display: inline-block; position: relative; width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
 .popup .popup__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
-.popup .popup__close:before, .popup .popup__close:after { content: ""; position: absolute; background: white; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.popup .popup__close:before, .popup .popup__close:after { content: ""; position: absolute; background: #FFF; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 .popup .popup__close:before { top: 14px; left: 5px; width: 20px; height: 2px; }
 .popup .popup__close:after { top: 5px; left: 14px; width: 2px; height: 20px; }
-.popup .popup__msg { padding: 20px; border: 1px solid #dddddd; font-size: 16px; }
+.popup .popup__msg { padding: 20px; border: 1px solid #ddd; font-size: 16px; }
 .popup .form { margin: 0; }
 .popup .form__foot { padding: 0 15px 20px; text-align: center; }
 .popup .form-error { padding-top: 3px; font-size: 12px; color: #b94a48; }

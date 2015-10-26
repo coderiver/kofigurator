@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -53,7 +53,7 @@
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	transform: translate(0, 0)
-	
+
 $orange: #eb4200
 
 body
@@ -97,7 +97,7 @@ body
 		+r(767)
 			width: 100%
 			padding: 0 0 30px
-			text-align: center 
+			text-align: center
 	.config__intro-pic
 		display: inline-block
 		position: relative
@@ -111,10 +111,10 @@ body
 		width: 60px
 		height: 60px
 		border-radius: 50%
-		background: $orange 
-		font-size: 24px 
-		color: #FFF 
-		line-height: 60px 
+		background: $orange
+		font-size: 24px
+		color: #FFF
+		line-height: 60px
 	.config__intro-type
 		color: $orange
 		font-size: 20px
@@ -128,7 +128,7 @@ body
 		overflow: hidden
 	.config__aside
 		float: right
-		width: 200px 
+		width: 200px
 		margin-left: 25px
 		+r(767)
 			float: none
@@ -143,7 +143,7 @@ body
 		margin-bottom: 20px
 		font-size: 16px
 	.config__accord-item
-		border-top: 1px solid #ddd 
+		border-top: 1px solid #ddd
 	.config__accord-title
 		position: relative
 		padding: 10px 15px 10px 0
@@ -159,7 +159,7 @@ body
 			right: 0
 			top: 50%
 			margin-top: -9px
-			+fa 
+			+fa
 			font-size: 18px
 			+tr(transform .2s)
 	.config__accord-body
@@ -175,7 +175,7 @@ body
 				height: 6px
 				margin-top: -3px
 				background: #ddd
-				border-radius: 50% 
+				border-radius: 50%
 	.config__colpick
 		.colpick
 			width: 200px
@@ -201,7 +201,7 @@ body
 			top: 0
 			left: 173px
 			height: 160px
-			border: none 
+			border: none
 	.config__house
 		+clr
 	.config__house_1
@@ -224,7 +224,7 @@ body
 			top: 15%
 			left: 9.06%
 			width: 83.82%
-			opacity: .2 
+			opacity: .2
 		.config__l_5
 			top: 15%
 			left: 9%
@@ -287,7 +287,7 @@ body
 			top: 12.6%
 			left: 8.3%
 			width: 85.444%
-			opacity: .5 
+			opacity: .5
 		.config__l_5
 			top: 12.6%
 			left: 8.6%
@@ -398,11 +398,16 @@ body
 			float: none
 			margin-bottom: 20px
 		&:hover
-			color: #555 
+			color: #555
 	.config__btn
 		float: right
 		background: $orange
 		color: #fff
+		margin-right: 15px
+		&:nth-child(2)
+			margin-right: 0
+			+r(767)
+				float: right
 		+r(767)
 			float: none
 
@@ -419,7 +424,7 @@ body
 		display: inline-block
 		position: relative
 		width: 600px
-		background: #FFF 
+		background: #FFF
 		vertical-align: middle
 		text-align: left
 	.popup__close
@@ -430,12 +435,12 @@ body
 		height: 30px
 		padding: 0
 		text-transform: uppercase
-		z-index: 4 
+		z-index: 4
 		&:before,
 		&:after
 			content: ""
 			position: absolute
-			background: #FFF 
+			background: #FFF
 			+rotate(45)
 		&:before
 			top: 14px
@@ -460,7 +465,7 @@ body
 		padding-top: 3px
 		font-size: 12px
 		color: rgb(185,74,72)
-			
+
 
 
 
