@@ -420,10 +420,12 @@ body
 	bottom: 0
 	background: rgba(#000,.5)
 	+vertical
+	white-space: nowrap
 	.popup__in
 		display: inline-block
+		white-space: normal
 		position: relative
-		width: 600px
+		max-width: 600px
 		background: #FFF
 		vertical-align: middle
 		text-align: left
@@ -436,6 +438,9 @@ body
 		padding: 0
 		text-transform: uppercase
 		z-index: 4
+		+r(600)
+			top: 0
+			right: 0  
 		&:before,
 		&:after
 			content: ""
