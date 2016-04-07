@@ -110,15 +110,15 @@ body.no-scroll { overflow: hidden; }
 @media only screen and (max-width: 767px) { .config .config__btn:nth-child(2) { float: right; } }
 @media only screen and (max-width: 767px) { .config .config__btn { float: none; } }
 
-.popup, .popup-konfigurator { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; }
-.popup:before, .popup-konfigurator:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popup .popup__in, .popup .popup-konfigurator__in, .popup-konfigurator .popup__in, .popup-konfigurator .popup-konfigurator__in { display: inline-block; white-space: normal; position: relative; max-width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
-.popup .popup__close, .popup .popup-konfigurator__close, .popup-konfigurator .popup__close, .popup-konfigurator .popup-konfigurator__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
-@media only screen and (max-width: 600px) { .popup .popup__close, .popup .popup-konfigurator__close, .popup-konfigurator .popup__close, .popup-konfigurator .popup-konfigurator__close { top: 0; right: 0; } }
-.popup .popup__close:before, .popup .popup__close:after, .popup .popup-konfigurator__close:before, .popup .popup-konfigurator__close:after, .popup-konfigurator .popup__close:before, .popup-konfigurator .popup__close:after, .popup-konfigurator .popup-konfigurator__close:before, .popup-konfigurator .popup-konfigurator__close:after { content: ""; position: absolute; background: #FFF; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-.popup .popup__close:before, .popup .popup-konfigurator__close:before, .popup-konfigurator .popup__close:before, .popup-konfigurator .popup-konfigurator__close:before { top: 14px; left: 5px; width: 20px; height: 2px; }
-.popup .popup__close:after, .popup .popup-konfigurator__close:after, .popup-konfigurator .popup__close:after, .popup-konfigurator .popup-konfigurator__close:after { top: 5px; left: 14px; width: 2px; height: 20px; }
-.popup .popup__msg, .popup .popup-konfigurator__msg, .popup-konfigurator .popup__msg, .popup-konfigurator .popup-konfigurator__msg { padding: 20px; border: 1px solid #ddd; font-size: 16px; }
-.popup .form, .popup-konfigurator .form { margin: 0; }
-.popup .form__foot, .popup-konfigurator .form__foot { padding: 0 15px 20px; text-align: center; }
-.popup .form-error, .popup-konfigurator .form-error { padding-top: 3px; font-size: 12px; color: #b94a48; }
+.popup-konfigurator { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; }
+.popup-konfigurator:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popup-konfigurator .popup-konfigurator__in { display: inline-block; white-space: normal; position: relative; max-width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
+.popup-konfigurator .popup-konfigurator__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
+@media only screen and (max-width: 600px) { .popup-konfigurator .popup-konfigurator__close { top: 0; right: 0; } }
+.popup-konfigurator .popup-konfigurator__close:before, .popup-konfigurator .popup-konfigurator__close:after { content: ""; position: absolute; background: #FFF; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.popup-konfigurator .popup-konfigurator__close:before { top: 14px; left: 5px; width: 20px; height: 2px; }
+.popup-konfigurator .popup-konfigurator__close:after { top: 5px; left: 14px; width: 2px; height: 20px; }
+.popup-konfigurator .popup-konfigurator__msg { padding: 20px; border: 1px solid #ddd; font-size: 16px; }
+.popup-konfigurator .form { margin: 0; }
+.popup-konfigurator .form__foot { padding: 0 15px 20px; text-align: center; }
+.popup-konfigurator .form-error { padding-top: 3px; font-size: 12px; color: #b94a48; }
