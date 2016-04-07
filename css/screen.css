@@ -112,7 +112,8 @@ body.no-scroll { overflow: hidden; }
 
 .popup-konfigurator { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; }
 .popup-konfigurator:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popup-konfigurator .popup-konfigurator__in { display: inline-block; white-space: normal; position: relative; max-width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
+.popup-konfigurator .popup-konfigurator__in { display: inline-block; white-space: normal; position: relative; width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
+@media only screen and (max-width: 600px) { .popup-konfigurator .popup-konfigurator__in { width: auto; max-width: 600px; } }
 .popup-konfigurator .popup-konfigurator__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
 @media only screen and (max-width: 600px) { .popup-konfigurator .popup-konfigurator__close { top: 0; right: 0; } }
 .popup-konfigurator .popup-konfigurator__close:before, .popup-konfigurator .popup-konfigurator__close:after { content: ""; position: absolute; background: #FFF; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }

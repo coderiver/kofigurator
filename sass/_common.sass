@@ -425,10 +425,13 @@ body
 		display: inline-block
 		white-space: normal
 		position: relative
-		max-width: 600px
+		width: 600px
 		background: #FFF
 		vertical-align: middle
 		text-align: left
+		+r(600)
+			width: auto 
+			max-width: 600px 
 	.popup-konfigurator__close
 		position: absolute
 		top: -16px
