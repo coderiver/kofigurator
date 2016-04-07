@@ -1,124 +1,80 @@
-@charset "UTF-8";
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+/*
+Error: Invalid CSS after ".popup__close,.": expected class name, was ".popup-konfigur..."
+        on line 432 of /Users/akella/Desktop/git/kofigurator/sass/_common.sass
+        from line 4 of /Users/akella/Desktop/git/kofigurator/sass/screen.sass
 
-body, html { height: 100%; }
-
-img, fieldset, a img { border: none; }
-
-input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
-
-input[type="submit"], button { cursor: pointer; }
-input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
-
-textarea { overflow: auto; }
-
-input, button { margin: 0; padding: 0; border: 0; }
-
-div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
-
-ul, ol { list-style-type: none; }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
-table { border-spacing: 0; border-collapse: collapse; width: 100%; }
-
-html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-*:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; line-height: 1.4; min-width: 320px; color: #555; }
-body.no-scroll { overflow: hidden; }
-
-.config { max-width: 960px; min-height: 590px; margin: 0 auto 20px; padding: 0 20px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-@media only screen and (max-width: 1023px) { .config { min-height: 0; } }
-@media only screen and (max-width: 767px) { .config { padding: 0 10px; } }
-.config img { display: block; max-width: 100%; height: auto; }
-.config .config__intro { text-align: center; }
-.config .config__intro-title { margin-bottom: 50px; font-size: 20px; }
-.config .config__intro-list { font-size: 0; text-align: center; }
-.config .config__intro-item { display: inline-block; width: 33.33%; text-decoration: none; vertical-align: top; padding: 0 18px 20px; }
-@media only screen and (max-width: 767px) { .config .config__intro-item { width: 100%; padding: 0 0 30px; text-align: center; } }
-.config .config__intro-pic { display: inline-block; position: relative; margin-bottom: 20px; font-size: 0; vertical-align: top; }
-.config .config__intro-number { position: absolute; top: -5px; left: 15px; width: 60px; height: 60px; border-radius: 50%; background: #eb4200; font-size: 24px; color: #FFF; line-height: 60px; }
-.config .config__intro-type { color: #eb4200; font-size: 20px; line-height: 1.2; }
-.config .config__intro-type span { display: block; font-weight: 700; }
-.config .config__in { display: none; }
-.config .config__section { overflow: hidden; }
-.config .config__aside { float: right; width: 200px; margin-left: 25px; }
-@media only screen and (max-width: 767px) { .config .config__aside { float: none; width: 100%; margin: 0 0 15px; } }
-.config .config__wrapper { position: relative; font-size: 0; }
-.config .config__l { position: absolute; }
-.config .config__title { margin-bottom: 20px; font-size: 16px; }
-.config .config__accord-item { border-top: 1px solid #ddd; }
-.config .config__accord-title { position: relative; padding: 10px 15px 10px 0; font-size: 14px; color: #eb4200; cursor: pointer; }
-.config .config__accord-title.is-active:after { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.config .config__accord-title:after { content: ""; position: absolute; right: 0; top: 50%; margin-top: -9px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 18px; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; }
-.config .config__accord-body { display: none; }
-.config .config__accord-body .config__accord-title { padding-left: 20px; }
-.config .config__accord-body .config__accord-title:before { content: ""; position: absolute; top: 50%; left: 0; width: 6px; height: 6px; margin-top: -3px; background: #ddd; border-radius: 50%; }
-.config .config__colpick .colpick { width: 200px; height: 160px; padding-bottom: 10px; background: none; border: none; border-radius: 0; }
-.config .config__colpick .colpick_color { top: 0; left: 0; outline: none; }
-.config .config__colpick .colpick_color, .config .config__colpick .colpick_color_overlay1, .config .config__colpick .colpick_color_overlay2 { width: 160px; height: 160px; }
-.config .config__colpick .colpick_new_color, .config .config__colpick .colpick_current_color, .config .config__colpick .colpick_hex_field { display: none; }
-.config .config__colpick .colpick_hue { top: 0; left: 173px; height: 160px; border: none; }
-.config .config__house { *zoom: 1; }
-.config .config__house:after { content: " "; display: table; clear: both; }
-.config .config__house_1 .config__l_1 { top: 24.5%; left: 10%; width: 68.3%; height: 45.358%; }
-.config .config__house_1 .config__l_2 { top: 17.4%; left: 9%; width: 83.81%; height: 55%; }
-.config .config__house_1 .config__l_3 { top: 15%; left: 37%; width: 48.572%; height: 11.608%; }
-.config .config__house_1 .config__l_4 { top: 15%; left: 9.06%; width: 83.82%; opacity: 0.2; }
-.config .config__house_1 .config__l_5 { top: 15%; left: 9%; width: 83.81%; opacity: 0.2; }
-.config .config__house_1 .config__l_6 { top: 50.4%; left: 9.8%; width: 66.803%; height: 18.93%; }
-.config .config__house_1 .config__l_7 { top: 50.4%; left: 9.9%; width: 66.803%; height: 18.93%; }
-.config .config__house_1 .config__l_8 { top: 50%; left: 9.3%; width: 67.62%; }
-.config .config__house_1 .config__l_9 { top: 50%; left: 9.53%; width: 67.22%; }
-.config .config__house_1 .config__l_10 { top: 50%; left: 9.4%; width: 67.483%; height: 2.858%; }
-.config .config__house_1 .config__l_11 { top: 50%; left: 9.6%; width: 26.123%; opacity: 0.4; }
-.config .config__house_1 .config__l_12 { top: 52.3%; left: 80.4%; width: 6.667%; height: 14.109%; }
-.config .config__house_1 .config__l_13 { top: 52.3%; left: 80.3%; width: 6.667%; }
-.config .config__house_2 .config__l_1 { top: 31.6%; left: 21.1%; width: 63.266%; height: 43.572%; }
-.config .config__house_2 .config__l_2 { top: 17.4%; left: 12%; width: 75.648%; height: 59.823%; }
-.config .config__house_2 .config__l_3 { top: 12.6%; left: 8.6%; width: 84.9%; height: 34.644%; }
-.config .config__house_2 .config__l_4 { top: 12.6%; left: 8.3%; width: 85.444%; opacity: 0.5; }
-.config .config__house_2 .config__l_5 { top: 12.6%; left: 8.6%; width: 84.9%; opacity: 0.5; }
-.config .config__house_2 .config__l_6 { top: 58.3%; left: 65.7%; width: 18.777%; height: 14.288%; }
-.config .config__house_2 .config__l_7 { top: 58.3%; left: 65.7%; width: 18.777%; }
-.config .config__house_2 .config__l_8 { top: 31.6%; left: 20.8%; width: 32.382%; height: 43.74%; }
-.config .config__house_2 .config__l_9 { top: 31.6%; left: 20.8%; width: 32.382%; height: 43.74%; }
-.config .config__house_2 .config__l_10 { top: 31.6%; left: 21%; width: 32.382%; }
-.config .config__house_2 .config__l_11 { top: 31.6%; left: 20.8%; width: 32.654%; }
-.config .config__house_2 .config__l_12 { top: 31.5%; left: 20.8%; width: 32.518%; height: 25%; }
-.config .config__house_3 .config__l_1 { top: 24.1%; left: 6.5%; width: 86.804%; height: 46.072%; }
-.config .config__house_3 .config__l_2 { top: 34%; left: 9.9%; width: 69.934%; height: 34.466%; }
-.config .config__house_3 .config__l_3 { top: 21.4%; left: 2.9%; width: 89.798%; height: 23.036%; }
-.config .config__house_3 .config__l_4 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.2; }
-.config .config__house_3 .config__l_5 { top: 21.5%; left: 2.9%; width: 90.478%; opacity: 0.2; }
-.config .config__house_3 .config__l_6 { top: 34%; left: 60.1%; width: 19.592%; height: 25%; }
-.config .config__house_3 .config__l_7 { top: 34.5%; left: 60.1%; width: 19.728%; height: 28.75%; }
-.config .config__house_3 .config__l_8 { top: 34%; left: 59.7%; width: 20.274%; }
-.config .config__house_3 .config__l_9 { top: 55.2%; left: 43.8%; width: 7.484%; height: 13.394%; }
-.config .config__house_3 .config__l_10 { top: 55.2%; left: 43.7%; width: 7.62%; }
-.config .config__house_3 .config__l_11 { top: 35%; left: 59.8%; width: 20.138%; }
-.config .config__house_3 .config__l_12 { top: 33.9%; left: 59.7%; width: 20.138%; height: 20.716%; }
-.config .config__foot { padding-top: 20px; *zoom: 1; }
-.config .config__foot:after { content: " "; display: table; clear: both; }
-.config .config__link { float: left; margin-top: 10px; text-decoration: none; font-size: 14px; color: #eb4200; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
-@media only screen and (max-width: 767px) { .config .config__link { display: block; float: none; margin-bottom: 20px; } }
-.config .config__link:hover { color: #555; }
-.config .config__btn { float: right; background: #eb4200; color: #fff; margin-right: 15px; }
-.config .config__btn:nth-child(2) { margin-right: 0; }
-@media only screen and (max-width: 767px) { .config .config__btn:nth-child(2) { float: right; } }
-@media only screen and (max-width: 767px) { .config .config__btn { float: none; } }
-
-.popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; }
-.popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popup .popup__in { display: inline-block; white-space: normal; position: relative; max-width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
-.popup .popup__close { position: absolute; top: -16px; right: -16px; width: 30px; height: 30px; padding: 0; text-transform: uppercase; z-index: 4; }
-@media only screen and (max-width: 600px) { .popup .popup__close { top: 0; right: 0; } }
-.popup .popup__close:before, .popup .popup__close:after { content: ""; position: absolute; background: #FFF; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-.popup .popup__close:before { top: 14px; left: 5px; width: 20px; height: 2px; }
-.popup .popup__close:after { top: 5px; left: 14px; width: 2px; height: 20px; }
-.popup .popup__msg { padding: 20px; border: 1px solid #ddd; font-size: 16px; }
-.popup .form { margin: 0; }
-.popup .form__foot { padding: 0 15px 20px; text-align: center; }
-.popup .form-error { padding-top: 3px; font-size: 12px; color: #b94a48; }
+Backtrace:
+/Users/akella/Desktop/git/kofigurator/sass/_common.sass:432
+/Users/akella/Desktop/git/kofigurator/sass/screen.sass:4
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/parser.rb:1093:in `tok!'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:191:in `class_selector'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:153:in `simple_selector_sequence'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:112:in `selector'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:92:in `selector_comma_sequence'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/parser.rb:1076:in `expr!'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:425:in `visit_rule'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `map'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:88:in `block in with_import'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:88:in `with_import'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/tree/root_node.rb:20:in `render'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/engine.rb:278:in `render'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/akella/.rvm/gems/ruby-2.2.2/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".popup__close,.\": expected class name, was \".popup-konfigur...\"\A         on line 432 of /Users/akella/Desktop/git/kofigurator/sass/_common.sass\A         from line 4 of /Users/akella/Desktop/git/kofigurator/sass/screen.sass"; }
