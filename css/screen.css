@@ -109,8 +109,9 @@ body.no-scroll { overflow: hidden; }
 .config .config__btn:nth-child(2) { margin-right: 0; }
 @media only screen and (max-width: 767px) { .config .config__btn:nth-child(2) { float: right; } }
 @media only screen and (max-width: 767px) { .config .config__btn { float: none; } }
+@media only screen and (max-width: 580px) { .config .config__btn { float: none; width: 100%; margin: 4px 0; } }
 
-.popup-konfigurator { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; }
+.popup-konfigurator { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); text-align: center; font-size: 0; white-space: nowrap; z-index: 100; }
 .popup-konfigurator:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup-konfigurator .popup-konfigurator__in { display: inline-block; white-space: normal; position: relative; width: 600px; background: #FFF; vertical-align: middle; text-align: left; }
 @media only screen and (max-width: 600px) { .popup-konfigurator .popup-konfigurator__in { width: auto; max-width: 600px; } }
