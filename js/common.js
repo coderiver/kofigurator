@@ -148,7 +148,16 @@ function configColours () {
 	var accordTitle = $('.js-config-accord-title'),
 		accordBody = $('.js-config-accord-body');
 	accordTitle.on('click', function () {
-		var _this = $(this);
+		var _this = $(this),
+			hideAttr = _this.data('hide');
+			showAttr = _this.data('show');
+		// hide layer
+		if (typeof hideAttr !== typeof undefined && hideAttr !== false) {
+			$('.' + hideAttr).hide();
+		}
+		if (typeof showAttr !== typeof undefined && showAttr !== false) {
+			$('.' + showAttr).show();
+		}
 		if (!_this.hasClass('is-active')) {
 			if (_this.parent().parent().hasClass('js-config-accord-body')) {
 				var _thisParent = _this.parent().parent()
